@@ -26,6 +26,12 @@ INSTALLED_APPS = [
 2️⃣ Update URL Configuration
 Include code_modifier in your project’s URL configuration by adding it to your urls.py:
 
+create some dummy apps and views in your app .
+
+go to http://127.0.0.1:8000/code_modifier/code_mod/
+
+have fun 
+
 
 python
 Copy code
