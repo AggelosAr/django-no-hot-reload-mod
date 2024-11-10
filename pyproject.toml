@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 
 [project]
-name = "example_package_papaggalos"
+name = "django_no_hot_reload_mod"
 version = "0.0.8"
 authors = [
   { name="https://github.com/AggelosAr", email="aggelosarelakis@gmail.com" },
