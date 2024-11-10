@@ -34,7 +34,7 @@ from django.urls import path, include
 
 urlpatterns = [
     ...,
-    path("code_modifier/", include("django_no_hot_reload_mod.code_modifier.urls")),
+    path("code_modifier/", include("django_no_hot_reload_mod.src.code_modifier.urls")),
 ]
 
 Let me know if you’d like any further changes or additions! 🎉
