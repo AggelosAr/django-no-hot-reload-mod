@@ -16,7 +16,7 @@ python
 Copy code
 INSTALLED_APPS = [
     ...,
-    'django_no_hot_reload_mod.src.django_no_hot_reload_mod.code_modifier',
+    'django_no_hot_reload_mod.src.code_modifier',
 ]
 
 2️⃣ Update URL Configuration
