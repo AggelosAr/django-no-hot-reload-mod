@@ -7,4 +7,4 @@ build/
 *.egg-info/
 .pypirc
 .idea
-pyproject
+pyproject.toml
