@@ -3,6 +3,10 @@
 Effortlessly modify Django endpoint functionality without restarting the server.
 
 
+https://pypi.org/project/django-no-hot-reload-mod/
+
+pip install django-no-hot-reload-mod
+
 🌟 Overview
 django-no-hot-reload-mod enables real-time modifications to Django endpoints without needing to restart the development server. Perfect for rapid development and testing, allowing you to make frequent changes on the fly.
 
