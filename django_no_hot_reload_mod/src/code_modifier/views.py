@@ -24,7 +24,6 @@ def code_mod(request):
             view = form.cleaned_data['views']
             code_block = form.cleaned_data['code_block']
 
-            print(f"!!!! form is good !!!! -> trying to change code of ({app} - {view})")
             change_code(app=app, view=view, code_block=code_block)
             return JsonResponse({"did": "change"})
 
@@ -36,7 +35,6 @@ def code_mod(request):
         code_block = form.cleaned_data['code_block']
         view = re.findall(r'(?:valid choice\.\s)(\w+)', form.errors.__str__())[0]
 
-        print(f"!!!! form is bad :s !!!! -> trying to change code of ({app} - {view})")
         change_code(app=app, view=view, code_block=code_block)
         return render(request, 'code_modifier/code_blocks.html', {'form': form})
         # return JsonResponse({"did": "error", "message": "Form is not valid."})
@@ -54,7 +52,7 @@ def _get_app_views_names() -> dict[str, list[str]]:
     app_to_view = defaultdict(list)
 
     for app_name in set(settings.INSTALLED_APPS) & (set(os.listdir(settings.BASE_DIR))):
-        print("APP -0> ", app_name)
+        print(f"Code modifier: Discovering views for app {app_name}.", flush=True)
         module = import_module(app_name)
 
         for url_view in (set([el.name for el in module.urls.urlpatterns.__iter__()])) & set(dir(module.views)):

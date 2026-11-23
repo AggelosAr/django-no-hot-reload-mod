@@ -27,16 +27,15 @@ def _(request):
 
 def change_code(app: str, view: str, code_block: str):
 
-    print(" --- Trying to change code --- ")
     module = import_module(app)
     funcs = getattr(module, 'views', {})
-    view = getattr(funcs, view, None)
+    view_name = view
+    view = getattr(funcs, view_name, None)
 
     # function defined args breaks -> in code args ( in def )
     # new_code = textwrap.dedent(base64.standard_b64decode(code_block_bytes).decode())
 
     code_block = textwrap.dedent(code_block)
-    # assert dis.dis(view)
 
     to_eval = ['view']
     iterator_view = view
@@ -46,3 +45,4 @@ def change_code(app: str, view: str, code_block: str):
 
     to_eval.append("__code__ = compile(code_block, '<string>', 'exec').co_consts[0]")
     exec('.'.join(to_eval))
+    print(f"Code modifier: Updated view {app}.{view_name} without restarting the server.", flush=True)

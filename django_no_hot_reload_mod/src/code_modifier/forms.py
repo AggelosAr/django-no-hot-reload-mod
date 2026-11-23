@@ -48,13 +48,10 @@ class CodeBlocks(forms.Form):
         view = cleaned_data.get("views")
         code_block = cleaned_data.get("code_block")
         if not app:
-            print("not app in form ", app)
             self.add_error('apps', 'An app must be selected.')
         if not view:
-            print("not view in form ", view)
             self.add_error('views', 'A view must be selected.')
         if not code_block:
-            print("not code in form ", code_block)
             self.add_error('code_block', 'The code block cannot be empty.')
 
         return cleaned_data
