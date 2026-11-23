@@ -1,5 +1,7 @@
 # ✨ django-no-hot-reload-mod ✨
 
+[![Tests](https://github.com/AggelosAr/django-no-hot-reload-mod/actions/workflows/tests.yml/badge.svg)](https://github.com/AggelosAr/django-no-hot-reload-mod/actions/workflows/tests.yml)
+
 Effortlessly modify Django endpoint functionality without restarting the server.
 
 [django-no-hot-reload-mod on PyPI](https://pypi.org/project/django-no-hot-reload-mod/)
